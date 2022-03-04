@@ -1,0 +1,18 @@
+<ng-template [ngIf]="!isNewUserActive">
+  <h4>Listado de usuarios</h4>
+
+  <ul class="user-list">
+    <li class="user-list__item" *ngFor="let user of userList">
+      <app-user-card [user]="user" (sendDelete)="deleteUser($event)"></app-user-card>
+    </li>
+  </ul>
+
+  <button (click)="viewNewUser()">Crear nuevo user</button>
+</ng-template>
+
+
+<div *ngIf="isNewUserActive">
+  <app-new-user (sendUser)="handleUser($event)"></app-new-user>
+
+  <button (click)="back()">Volver</button>
+</div>

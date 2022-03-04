@@ -1,0 +1,9 @@
+<h4>Nuevo usuario</h4>
+
+<div>
+  <label for="username">Username</label>
+  <input type="text" name="username" id="username" #username (keyup)="saveUsername(username.value)">
+  <label for="age">Age</label>
+  <input type="text" name="age" id="age" [(ngModel)]="user.age">
+  <button (click)="createUser()">Crear usuario</button>
+</div>

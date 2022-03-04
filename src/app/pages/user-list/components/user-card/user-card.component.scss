@@ -1,0 +1,13 @@
+.user-card {
+  background-color: bisque;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 12px;
+
+  display: flex;
+  justify-content: center;
+
+  &__age {
+    margin-left: 20px;
+  }
+}
